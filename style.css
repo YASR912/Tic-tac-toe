@@ -1,0 +1,96 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2c3e50; /* Dark background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  color: #ecf0f1; /* Light text color for contrast */
+}
+
+/* Container for the game board */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  background-color: #34495e; /* Darker background for the grid */
+  border-radius: 8px;
+  padding: 10px;
+  border: 3px solid #2c3e50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for each cell in the grid */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-color: #1abc9c; /* Teal background for cells */
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ecf0f1; /* Light text color */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.1s;
+  border: 2px solid #16a085;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+  background-color: #16a085; /* Darker teal on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Style when a cell is clicked (X or O) */
+.cell.x {
+  color: #ffffff; /* Red for X */
+}
+
+.cell.o {
+  color: #121212; /* Blue for O */
+}
+
+/* Style for the reset button */
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #8e44ad; /* Purple button */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #9b59b6; /* Lighter purple on hover */
+}
+
+/* Displaying win message */
+.win-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-align: center;
+}
+
+/* Style for game over state */
+.game-over {
+  background-color: #e74c3c; /* Red background on game over */
+  color: white;
+}
